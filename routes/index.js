@@ -4,7 +4,7 @@ const request = require('request');
 const airtable = require('airtable');
 const config = require('../config');
 
-const base = new airtable({apiKey: config.airtableKey}).base('app1SGgO3Rp5BuarJ');
+const base = new airtable({apiKey: config.airtableKey}).base('appOJjMkjftdQCjDr');
 
 router.get('/', function(req, res) {
     res.setLocale(config.locale);
@@ -17,7 +17,6 @@ router.post('/invite', function(req, res) {
         // Post information to Airtable base
         base('Community_Members').create({
             name: req.body.name,
-            email: req.body.email,
             company: req.body.company,
             school: req.body.school,
         }, function(err, record) {
