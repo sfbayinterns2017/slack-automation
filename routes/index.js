@@ -13,12 +13,13 @@ router.get('/', function(req, res) {
 
 router.post('/invite', function(req, res) {
     if (req.body.email) {
-
+        console.log("adding to airtable");
         // Post information to Airtable base
-        base('Community_Members').create({
-            name: req.body.name,
-            company: req.body.company,
-            school: req.body.school,
+        base('Community Members').create({
+            Name: req.body.name,
+            Company: req.body.company,
+            Email: req.body.email,
+            School: req.body.school,
         }, function(err, record) {
             if (err) {
                 console.error(err);
