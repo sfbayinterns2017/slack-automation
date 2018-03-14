@@ -61,7 +61,7 @@ router.post('/invite', function(req, res) {
                 } else if (error === 'invalid_email') {
                     error = 'The email you entered is an invalid email.';
                 } else if (error === 'invalid_auth') {
-                    error = 'Something has gone wrong. Please contact a SFBayInterns2017 admin via Facebook or email.';
+                    error = 'Something has gone wrong. <a href="http://m.me/grgwlff" target="_blank">Let me know</a> what\'s not working!';
                 }
 
                 res.render('result', {

@@ -9,28 +9,99 @@ html
     link(href="//fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic|Open+Sans:700italic,400,600,300,700,800", rel="stylesheet", type="text/css")
   body
     #wrapper
-      .main
+      .main.fade-in
 
         .header
-          h1 
+          h1.fade-in 
             .small SF/Bay Area
-            | Interns 2018
-        form(method="POST", action="/invite")#join-form.form
-          label(for="name") #{__('ENTER_NAME')}
+            .fade-in Interns 2018
+        .cover
+        .hero
+          img(src="images/bridge.svg").bridge
+        //- a.cta.fade-in Join the Community →
+        form(method="POST", action="/invite")#join-form.form.invisible
+          label(for="name").label #{__('ENTER_NAME')}
           input(type="text", name="name", placeholder="Will Smith")#slack-name.field
-          label(for="name") #{__('ENTER_EMAIL')}
+          label(for="name").label #{__('ENTER_EMAIL')}
           input(type="email", name="email", placeholder="you@example.com")#slack-email.field
-          label(for="name") #{__('ENTER_COMPANY')}
+          label(for="name").label #{__('ENTER_COMPANY')}
           input(type="text", name="company", placeholder="Google")#slack-company.field
-          label(for="name") #{__('ENTER_SCHOOL')}
+          label(for="name").label #{__('ENTER_SCHOOL')}
           input(type="text", name="school", placeholder="Harvard")#slack-school.field
-          input(type="submit", value="Join the Community →").submit
+          button(type="submit").submit.fade-in.visible Join the Community
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js")
     script.
-      var tokenRequired = #{tokenRequired};
+      TweenMax.staggerTo('.fade-in', 0.15, {
+        opacity: 1,
+        delay: 1,
+        y: 0
+      }, .15);
+      TweenMax.staggerTo('.bridge', 2, {
+        ease: Cubic.easeOut,
+        opacity: 1,
+        delay: 1,
+        y: 0
+      });
+
+      //var tokenRequired = #{tokenRequired};
+      var title = true;
+
       var form = document.getElementById('join-form');
       var email = document.getElementById('slack-email');
       var token = document.getElementById('slack-token');
+      form.addEventListener('input', function(evt) {
+        let inputs = [];
+        [...document.querySelectorAll('input[type="text"]')]
+          .concat([...document.querySelectorAll('input[type="email"]')])
+            .forEach((el) => {
+              if (el.value) inputs.push(el)
+            })
+        if (inputs.length === 4)
+          TweenMax.to('.submit', 0.05, {
+            ease: Cubic.easeOut,
+            opacity: 1,
+            y: 0,
+            visibility: "visible"
+          }); 
+        else 
+          TweenMax.to('.submit', 0.05, {
+            ease: Cubic.easeOut,
+            opacity: 0,
+            y: "2px",
+            visibility: "hidden"
+          }); 
+      })
       form.addEventListener('submit', function(evt) {
+        if (title) {
+          evt.preventDefault();
+          title = false;
+          TweenMax.to('.bridge', 0.15, {
+            ease: Cubic.easeOut,
+            opacity: 0,
+            y: 10,
+            onComplete: () => {
+              document.getElementById("join-form").classList.remove("invisible")
+              document.getElementsByClassName("cover")[0].classList.add("invisible")
+              TweenMax.fromTo('.submit', 0.05, {
+                opacity: 1,
+                y: "2px"
+              }, {
+                opacity: 0,
+                y: "2px",
+                visibility: "hidden"
+              }); 
+              TweenMax.fromTo('.label, .field', 0.15, {
+                opacity: 0,
+                y: "2px"
+              }, {
+                ease: Cubic.easeOut,
+                opacity: 1,
+                y: 0
+              });
+            }
+          });  
+          return;
+        }
         if (!email.value) {
           evt.preventDefault();
         }
