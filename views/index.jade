@@ -6,11 +6,9 @@ html
     title #{__('TITLE', community)}
     link(href="styles/normalize.css", rel="stylesheet", type="text/css")
     link(href="styles/style.css", rel="stylesheet", type="text/css")
-    link(href="//fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic|Open+Sans:700italic,400,600,300,700,800", rel="stylesheet", type="text/css")
   body
     #wrapper
       .main.fade-in
-
         .header
           h1.fade-in 
             .small SF/Bay Area
@@ -31,7 +29,7 @@ html
           button(type="submit").submit.fade-in.visible Join the Community
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js")
     script.
-      TweenMax.staggerTo('.fade-in', 0.15, {
+      TweenMax.staggerTo('.fade-in', 0.5, {
         opacity: 1,
         delay: 1,
         y: 0
@@ -40,7 +38,8 @@ html
         ease: Cubic.easeOut,
         opacity: 1,
         delay: 1,
-        y: 0
+        y: 0,
+        x: 0
       });
 
       //var tokenRequired = #{tokenRequired};

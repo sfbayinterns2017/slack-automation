@@ -69,7 +69,8 @@ a {
   top: 180px;
   left: 0;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translate(-10px, 50px);
+
 }
 
 .cover {
