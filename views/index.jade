@@ -14,6 +14,7 @@ html
             .small SF/Bay Area
             .fade-in Interns 2018
         .cover
+        .circle
         .hero
           img(src="images/bridge.svg").bridge
         //- a.cta.fade-in Join the Community →
@@ -35,11 +36,17 @@ html
         y: 0
       }, .15);
       TweenMax.staggerTo('.bridge', 2, {
-        ease: Cubic.easeOut,
+        ease: Quart.easeOut,
         opacity: 1,
         delay: 1,
         y: 0,
         x: 0
+      });
+      TweenMax.staggerTo('.circle', 2, {
+        ease: Cubic.easeOut,
+        opacity: .44,
+        delay: .5,
+        y: 0
       });
 
       //var tokenRequired = #{tokenRequired};
@@ -74,7 +81,7 @@ html
         if (title) {
           evt.preventDefault();
           title = false;
-          TweenMax.to('.bridge', 0.15, {
+          TweenMax.to('.bridge,.circle', 0.15, {
             ease: Cubic.easeOut,
             opacity: 0,
             y: 10,
