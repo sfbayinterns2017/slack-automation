@@ -140,25 +140,8 @@ label {
 }
 
 @media only screen and (max-width: 560px) {
-  .information {
-    width: 100%;
-  }
-  .form {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .field {
-    width: 90%;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 20px;
-    padding: 0 20 20 0;
+  .main {
+    border: none;
   }
 }
 
