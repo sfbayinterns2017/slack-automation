@@ -4,30 +4,38 @@
     <title>gg-bridge copy</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+        <linearGradient x1="54.7878284%" y1="50%" x2="25.7678529%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#ED4646" offset="0%"></stop>
+            <stop stop-color="#FF6262" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
             <stop stop-color="#F75757" offset="0%"></stop>
             <stop stop-color="#ED4646" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="50%" y1="28.0285347%" x2="50%" y2="100%" id="linearGradient-2">
+        <linearGradient x1="50%" y1="28.0285347%" x2="50%" y2="100%" id="linearGradient-3">
             <stop stop-color="#EF4949" offset="0%"></stop>
             <stop stop-color="#F66565" offset="100%"></stop>
         </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-4">
+            <stop stop-color="#FF6262" offset="0%"></stop>
+            <stop stop-color="#EF4949" offset="100%"></stop>
+        </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="animation" transform="translate(-381.000000, -387.000000)">
-            <g id="Group-Copy" transform="translate(381.000000, 242.000000)">
+        <g id="bridge-svg" transform="translate(-349.000000, -387.000000)">
+            <g id="Group-Copy-2" transform="translate(349.000000, 242.000000)">
                 <g id="gg-bridge-copy" transform="translate(163.500000, 298.647651) scale(-1, 1) translate(-163.500000, -298.647651) translate(-103.000000, 145.147651)">
                     <rect id="Rectangle-4-Copy" fill="#F66565" transform="translate(255.746615, 278.166616) rotate(-90.000000) translate(-255.746615, -278.166616) " x="227.516573" y="270.631629" width="56.460084" height="15.0699747"></rect>
                     <rect id="Rectangle-4-Copy-2" fill="#F66565" transform="translate(324.126050, 278.166616) rotate(-90.000000) translate(-324.126050, -278.166616) " x="295.896008" y="270.631629" width="56.460084" height="15.0699747"></rect>
-                    <rect id="Rectangle-4" fill="#ED4646" x="0" y="236.09627" width="532.125" height="14.4420591"></rect>
-                    <path d="M324.12605,243.3173 C427.892961,243.3173 512.012663,159.119645 512.012663,55.2565739" id="Oval" stroke="url(#linearGradient-1)" stroke-width="14.4229164" transform="translate(418.069357, 149.286937) scale(-1, 1) translate(-418.069357, -149.286937) "></path>
-                    <path d="M255.746615,243.3173 C359.513526,243.3173 443.633228,159.119645 443.633228,55.2565739" id="Oval-Copy-2" stroke="url(#linearGradient-1)" stroke-width="14.4229164" transform="translate(349.689922, 149.286937) scale(-1, 1) translate(-349.689922, -149.286937) "></path>
-                    <rect id="Rectangle-2" fill="url(#linearGradient-2)" x="248.218604" y="30.767865" width="83.4354575" height="205.956321"></rect>
+                    <rect id="Rectangle-4" fill="url(#linearGradient-1)" x="0" y="236.09627" width="532.125" height="14.4420591"></rect>
+                    <path d="M324.12605,243.3173 C427.892961,243.3173 512.012663,159.119645 512.012663,55.2565739" id="Oval" stroke="url(#linearGradient-2)" stroke-width="14.4229164" transform="translate(418.069357, 149.286937) scale(-1, 1) translate(-418.069357, -149.286937) "></path>
+                    <path d="M255.746615,243.3173 C359.513526,243.3173 443.633228,159.119645 443.633228,55.2565739" id="Oval-Copy-2" stroke="url(#linearGradient-2)" stroke-width="14.4229164" transform="translate(349.689922, 149.286937) scale(-1, 1) translate(-349.689922, -149.286937) "></path>
+                    <rect id="Rectangle-2" fill="url(#linearGradient-3)" x="248.218604" y="30.767865" width="83.4354575" height="205.956321"></rect>
                     <rect id="Rectangle-3" fill="#FFFFFF" x="263.274627" y="0" width="54.5780812" height="54.0007427" rx="7.52620406"></rect>
                     <rect id="Rectangle-3-Copy" fill="#FFFFFF" x="263.274627" y="75.9777891" width="54.5780812" height="69.0707174" rx="7.52620406"></rect>
                     <rect id="Rectangle-3-Copy-2" fill="#FFFFFF" x="263.274627" y="167.653468" width="54.5780812" height="69.0707174" rx="7.52620406"></rect>
-                    <path d="M67.5463352,243.3173 C171.313246,243.3173 255.432948,159.119645 255.432948,55.2565739" id="Oval" stroke="#ED4646" stroke-width="14.4229164"></path>
-                    <path d="M135.92577,243.3173 C239.692681,243.3173 323.812383,159.119645 323.812383,55.2565739" id="Oval-Copy" stroke="#ED4646" stroke-width="14.4229164"></path>
+                    <path d="M67.5463352,243.3173 C171.313246,243.3173 255.432948,159.119645 255.432948,55.2565739" id="Oval" stroke="url(#linearGradient-4)" stroke-width="14.4229164"></path>
+                    <path d="M135.92577,243.3173 C239.692681,243.3173 323.812383,159.119645 323.812383,55.2565739" id="Oval-Copy" stroke="url(#linearGradient-4)" stroke-width="14.4229164"></path>
                 </g>
             </g>
         </g>
