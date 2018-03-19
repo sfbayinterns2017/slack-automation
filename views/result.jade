@@ -3,13 +3,23 @@ html
   head
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    title #{__('TITLE', community)}
+    title #{community}
+    link(href="images/favicon.ico" rel="shortcut icon")
+    link(href="styles/normalize.css", rel="stylesheet", type="text/css")
     link(href="styles/style.css", rel="stylesheet", type="text/css")
-    link(href="//fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic|Open+Sans:700italic,400,600,300,700,800", rel="stylesheet", type="text/css")
   body
     #wrapper
-      .main
+      .main.fade-in
         .header
-          h1
-            strong #{community}
-          h2(class="#{isFailed?'error':''}") !{message}
+          h1.fade-in
+            .small SF/Bay Area
+            .fade-in Interns 2018
+          p(class="#{isFailed?'error':''}").fade-in !{message}
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js")
+    script.
+      TweenMax.staggerTo('.fade-in', 0.5, {
+        opacity: 1,
+        delay: .5,
+        y: 0
+      }, .15);
+
