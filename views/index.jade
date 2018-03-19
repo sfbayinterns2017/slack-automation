@@ -3,7 +3,7 @@ html
   head
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    title #{__('TITLE', community)}
+    title #{community}
     link(href="images/favicon.ico" rel="shortcut icon")
     link(href="styles/normalize.css", rel="stylesheet", type="text/css")
     link(href="styles/style.css", rel="stylesheet", type="text/css")
@@ -18,15 +18,14 @@ html
         .circle
         .hero
           img(src="images/bridge.svg").bridge
-        //- a.cta.fade-in Join the Community →
         form(method="POST", action="/invite")#join-form.form.invisible
-          label(for="name").label #{__('ENTER_NAME')}
+          label(for="name").label Your name
           input(type="text", name="name", placeholder="Will Smith")#slack-name.field
-          label(for="name").label #{__('ENTER_EMAIL')}
+          label(for="name").label Your Email
           input(type="email", name="email", placeholder="you@example.com")#slack-email.field
-          label(for="name").label #{__('ENTER_COMPANY')}
+          label(for="name").label Which company are you working at?
           input(type="text", name="company", placeholder="Google")#slack-company.field
-          label(for="name").label #{__('ENTER_SCHOOL')}
+          label(for="name").label What school do you attend?
           input(type="text", name="school", placeholder="Harvard")#slack-school.field
           button(type="submit").submit.fade-in.visible Join the Community
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js")
@@ -50,9 +49,8 @@ html
         y: 0
       });
 
-      //var tokenRequired = #{tokenRequired};
       var title = true;
-
+      
       var form = document.getElementById('join-form');
       var email = document.getElementById('slack-email');
       var token = document.getElementById('slack-token');
@@ -108,11 +106,8 @@ html
             }
           });  
           return;
-        }
-        if (!email.value) {
-          evt.preventDefault();
-        }
-        if (tokenRequired && !token.value) {
-          evt.preventDefault();
+        } else {
+          if (!email.value)
+            evt.preventDefault();
         }
       });
