@@ -10,7 +10,7 @@ router.get('/', (req, res) => { res.render('index', config); });
 
 router.post('/invite', function(req, res) {
     // Post information to Airtable base
-    base('Interns').create({
+    base('Community_Members').create({
         "Name": req.body.name,
         "Email": req.body.email,
         "Company": req.body.company,
