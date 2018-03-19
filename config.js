@@ -4,4 +4,5 @@ module.exports = {
     slacktoken: process.env.SLACK_TOKEN || 'YOUR SLACK TOKEN',
     locale: process.env.LOCALE || 'en',
     airtableKey: process.env.AIRTABLE_API_KEY || 'YOUR AIRTABLE API KEY',
+    airtableBaseId: process.env.AIRTABLE_BASE_ID || 'YOUR AIRTABLE BASE ID'
 };

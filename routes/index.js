@@ -4,17 +4,17 @@ const request = require('request');
 const airtable = require('airtable');
 const config = require('../config');
 
-const base = new airtable({apiKey: config.airtableKey}).base('app1SGgO3Rp5BuarJ');
+const base = new airtable({apiKey: config.airtableKey}).base(config.airtableBaseId);
 
 router.get('/', (req, res) => { res.render('index', config); });
 
 router.post('/invite', function(req, res) {
     // Post information to Airtable base
-    base('Community_Members').create({
-        name: req.body.name,
-        email: req.body.email,
-        company: req.body.company,
-        school: req.body.school,
+    base('Interns').create({
+        "Name": req.body.name,
+        "Email": req.body.email,
+        "Company": req.body.company,
+        "School": req.body.school,
     }, (err, record) => {
         if (err) {
             console.error(err);
